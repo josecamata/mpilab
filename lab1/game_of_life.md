@@ -22,7 +22,7 @@ abaixo, onde as células "vivas" são azuis e as células "mortas" são brancas.
 Como as células adjacentes são necessárias para determinar o novo estado de cada célula, algumas considerações especiais devem ser feitas co relação as 
 condições de contorno. Por exemplo, se estivermos olhando para uma célula na extremidade esquerda do domínio, precisamos saber o estado da célula à sua esquerda para determinar seu novo estado. O problema é que não há nenhuma célula à sua esquerda, pois está na borda do domínio. Esse problema é geralmente superado pela introdução de uma borda de "células fantasmas" e pela suposição de condições de contorno periódicas. A suposição é que o domínio se repete até o infinito em todas as direções. Isso é mostrado na Figura 2.
 
-![Figura 2: Condição de contorno periódica](life.jpg)
+![Figura 2: Condição de contorno periódica](periodic.jpg)
 
 Na Figura 2, uma grade 4x4 é mostrada para simplificar. O domínio foi repetido "lado a lado" em todas as direções. Os domínios lado a lado são mostrados em cinza e azul claro para diferenciá-los do domínio real. As células fantasmas são representadas pela borda desse domiio entorno do domínio real. Olhando para a coluna mais à esquerda do domínio real, as células fantasmas são as mesmas que as células do lado direito do domínio real. Uma configuração semelhante pode ser vista à direita, superior e inferior do domínio real.
 

@@ -29,8 +29,11 @@ Escreva um programa que, dado n processos, deve:
 
 Implemennte uma versão comunicação bloqueante e outra versão não-bloqueante.
 
+## Exercicio 3: Ping-Pong
 
-## Exercicio 3: Encontre &pi; usando método de Monte Carlo
+Modique o programa [ping_pong.c](ping_pong.c) de forma que dois processos fazem pingue-pongue de um número em varias rodadas. Emcada rodada o numero é  incrementado. A comunicação encerra quando um determiando valor é atingido.
+
+## Exercicio 4: Encontre &pi; usando método de Monte Carlo
 
 Método de Monte Carlo é um termo utilizado para se referir a qualquer método que resolve um problema gerando números aleatórios e observando se uma dada fração desses números satisfaz uma propriedade previamente estabelecida.
 
@@ -45,8 +48,7 @@ O que você acha que acontecerá com a precisão quando calculamos o &pi e quand
 
 Agora paralelize o programa serial. Use apenas as seis chamadas MPI básicas.
 
-
-## Exercicio 4:  "Jogo da Vida"
+## Exercicio 5:  "Jogo da Vida"
 
 
 Veja [aqui um introdução rápida sobre o que é "Jogo da Vida"](game_of_life.md).

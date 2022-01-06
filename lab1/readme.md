@@ -40,11 +40,8 @@ Pegue a [versão serial](serial_pi.c) do programa e modifique-a para funcionar e
 
 Primeiro, familiarize-se com a maneira como o programa serial funciona. 
 
-Dica: veja os comentários do programa. Como a precisão do cálculo depende de DARTS e ROUNDS, o número de etapas de aproximação?
-
-
-Dica: edite DARTS para ter vários valores de entrada de 10 a 10000. 
-O que você acha que acontecerá com a precisão com a qual calculamos o &pi; quando dividimos o trabalho entre os nós?
+Dica: edite NPOINTS para ter vários valores de entrada de 10 a 100000. 
+O que você acha que acontecerá com a precisão quando calculamos o &pi e quando dividimos o trabalho entre os nós?
 
 Agora paralelize o programa serial. Use apenas as seis chamadas MPI básicas.
 

@@ -1,13 +1,13 @@
 
 # Visão Geral
 
-Nesta atividade, você vai ganhar familiaridade com a estrutura do programa MPI e com a comunicação ponto a ponto trabalhando com programas como "Hello, World", cálculo de \pi, o jogo da vida.
+Nesta atividade, você vai ganhar familiaridade com a estrutura do programa MPI e com a comunicação ponto a ponto trabalhando com programas como "Hello, World", cálculo de %pi;, produto interno entre dois vetores e o Jogo da Vida.
 
 ### Objetivos
 
 Familiarize-se com a estrutura do programa MPI e a comunicação ponto a ponto escrevendo alguns programas MPI simples.
 
-# Códigos-Fontes
+### Códigos-Fontes
 
 - Hello, World: Serial C ([hello.c](hello.c))
 - Envie dados para todos os processos 
@@ -15,11 +15,11 @@ Familiarize-se com a estrutura do programa MPI e a comunicação ponto a ponto e
 - Produto Interno: Serial C
 - Game of Life: Serial C  ([game_of_life-serial.c](game_of_life-serial.c) 
 .
-# Exercício 1: Rode "Hello, World"
+## Exercício 1: Rode "Hello, World"
 
 Compile  e execute o programa "Hello, World". Certifique-se de compreender como cada processo imprime seu rank, bem como o número total de processos no comunicador MPI_COMM_WORLD.
 
-# Exercício 2: Comunicação em Anel
+## Exercício 2: Comunicação em Anel
 
 Escreva um programa que, dado n processos, deve:
 1. Inicializar uma variavel s com seu rank,
@@ -28,15 +28,18 @@ Escreva um programa que, dado n processos, deve:
    - Receber em r o valor do rank - 1;
    - Soma em s o valor de r;
 
-Implemennte uma versão comunicação bloqueante e outra versão com não bloqueante.
+Implemennte uma versão comunicação bloqueante e outra versão não-bloqueante.
 
 
-# Exercicio 3: Encontre &pi; using P2P (Mestre/Escravo)
+## Exercicio 3: Encontre &pi; usando método de Monte Carlo
 
-O programa fornecido calcula o valor de \pi usando uma aproximação de uma integral. 
-Pegue a versão serial do programa e modifique-a para funcionar em paralelo.
+Método de Monte Carlo é um termo utilizado para se referir a qualquer método que resolve um problema gerando números aleatórios e observando se uma dada fração desses números satisfaz uma propriedade previamente estabelecida.
 
-Primeiro, familiarize-se com a maneira como o programa serial funciona. Como ele calcula o \pi?
+Para calcular a área da circunferência unitária, utilizaremos o método de integração de Monte Carlo. A ideia é colocar a circunferência dentro de uma figura, cuja área seja fácil de calcular, e sortear pontos aleatórios dentro da figura. Utilizaremos um quadrado. Se o ponto sorteado estiver dentro da circunferência, então marcamos um acerto. Ao final dos sorteios, espera-se que a área da circunferência seja proporcional à taxa de acertos e à área do quadrado. Esse valor será uma aproximação para &pi;.
+
+Pegue a [versão serial](serial_pi.c) do programa e modifique-a para funcionar em paralelo.
+
+Primeiro, familiarize-se com a maneira como o programa serial funciona. 
 
 Dica: veja os comentários do programa. Como a precisão do cálculo depende de DARTS e ROUNDS, o número de etapas de aproximação?
 
@@ -46,10 +49,8 @@ O que você acha que acontecerá com a precisão com a qual calculamos o &pi; qu
 
 Agora paralelize o programa serial. Use apenas as seis chamadas MPI básicas.
 
-Dica: Como o número de DARTS e ROUNDS é codificado, todos os escravos já sabem disso, mas cada trabalhador deve calcular quantos estão em sua parte nos DARDOS para que ele faça sua parte no trabalho. Ao terminar, cada processo escavo envia sua soma parcial de volta ao processo mestre, que a recebe e calcula a soma final. 
 
-
-# Exercise 5: Use P2P no "Jogo da Vida"
+# Exercise 4:  "Jogo da Vida"
 
 
 Veja [aqui um introdução rápida sobre o que é "Jogo da Vida"](game_of_life.md).
@@ -57,7 +58,6 @@ Veja [aqui um introdução rápida sobre o que é "Jogo da Vida"](game_of_life.m
 Para iniciar este exercício, adicione as rotinas de inicialização e finalização MPI ao código serial "Game of Life". 
 Para mostrar que o código está funcionando conforme o esperado, adicione instruções para imprimir o  números de processos e o rank do processo local. 
 Não se esqueça de adicionar o arquivo de cabeçalho MPI.
-
 
 **Decomposição de Domínio*
 
@@ -69,15 +69,13 @@ Uma questão que você precisa considerar é a dos limites do domínio interno. 
 [descrição "Jogo da Vida"](game_of_life.md) para ver como preencher as outras células fantasmas. 
 
 
-
-
 <img src="lr_decomp_rot.jpg" alt="Figura 1"  with=400px>
 
 Figura 1. Decomposição de Domínio.
 
-Figura 2. Células Fantasmas.
 
 <img src="ghost_rot.jpg" alt="Figura 2" with=400px>
+Figura 2. Células Fantasmas.
 
 
 **Desafio**

@@ -10,8 +10,8 @@ Familiarize-se com a estrutura do programa MPI e a comunicação ponto a ponto e
 ### Códigos-Fontes
 
 - Hello, World: Serial C ([hello.c](hello.c))
-- [Ping-Pong](ping_pong.c)
 - Envie dados para todos os processos 
+- Comunicação [Ping-Pong](ping_pong.c)
 - Calculo do &pi: Serial C  ([pi_serial.c](pi_serial.c))
 - Game of Life: Serial C  ([game_of_life-serial.c](game_of_life-serial.c)) 
 .

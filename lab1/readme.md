@@ -51,25 +51,23 @@ Dica: Como o número de DARTS e ROUNDS é codificado, todos os escravos já sabe
 
 # Exercise 5: Use P2P no "Jogo da Vida"
 
-Neste exercicio 
-In this exercise, you continue learning about point-to-point message-passing routines in MPI.
-After completing this exercise, you should be able to write the real parallel MPI code to solve the Game of Life.
 
-[Here is some background on the "Game of Life"](Game_of_life.md), in case you're new to the problem.
+Veja [aqui um introdução rápida sobre o que é "Jogo da Vida"](game_of_life.md).
 
-To start this exercise, add the initialization and finalization routines to the serial "Game of Life" code. This will effectly duplicate the exact same calculation on each processor. In order to show that the code is performing as expected, add statements to print overall size, and the rank of the local process. Don't forget to add the MPI header file.
-
-Para iniciar este exercício, adicione as rotinas de inicialização e finalização ao código serial "Game of Life". Isso duplicará com eficácia o mesmo cálculo exato em cada processador. Para mostrar que o código está funcionando conforme o esperado, adicione instruções para imprimir o tamanho geral e a classificação do processo local. Não se esqueça de adicionar o arquivo de cabeçalho MPI.
+Para iniciar este exercício, adicione as rotinas de inicialização e finalização MPI ao código serial "Game of Life". 
+Para mostrar que o código está funcionando conforme o esperado, adicione instruções para imprimir o  números de processos e o rank do processo local. 
+Não se esqueça de adicionar o arquivo de cabeçalho MPI.
 
 
-**Domain Decomposition**
+**Decomposição de Domínio*
 
-In order to truly run the "Game of Life" program in parallel, we must set up our domain decomposition, i.e., divide the domain into chunks and send one chunk to each processor. In the current exercise, we will limit ourselves to two processors. If you are writing your code in C, divide the domain with a horizontal line, so the upper half will be processed on one processor and the lower half on a different processor. If you are using Fortran, divide the domain with a vertical line, so the left half goes to one processor and the right half to another.
+Para realmente executar o programa "Jogo da Vida" em paralelo, devemos configurar a decomposição de nosso domínio, ou seja, dividir o domínio em pedaços e enviar um pedaço para cada processador. No exercício atual, nos limitaremos a dois processadores. Se você estiver escrevendo seu código em C, divida o domínio com uma linha horizontal, de forma que a metade superior seja processada em um processador e a metade inferior em um processador diferente.
 
-Hint: Although this can be done with different kinds of sends and receives, use blocking sends and receives for the current problem. We have chosen the configuration described above because in C arrays, rows are contiguous, and in Fortran columns are contiguous. This approach allows the specification of the initial array location and the number of words in the send and receive routines.
+Dica: Escolhemos a configuração descrita acima porque em matrizes C, as linhas são contíguas. Esta abordagem permite a especificação da localização inicial do array e o número de dados nas rotinas de envio e recebimento.
 
-One issue that you need to consider is that of internal domain boundaries. Figure 1 shows the "left-right" domain decomposition described above. Each cell needs information from all adjacent cells to determine its new state. With domain decomposition, some of the required cells no longer are available on the local processor. A common way to tackle this problem is through the use of ghost cells. In the current example, a column of ghost cells is added to the right side of the left domain, and a column is also added to the left side of the right domain (shown in Figure 2). After each time step, the ghost cells are filled by passing the appropriate data from the other processor. You may want to refer to the figure in the 
-[background on the "Game of Life"](Game_of_life.md) to see how to fill the other ghost cells.
+Uma questão que você precisa considerar é a dos limites do domínio interno. A Figura 1 mostra a decomposição do domínio "esquerda-direita" descrita acima. Cada célula precisa de informações de todas as células adjacentes para determinar seu novo estado. Com a decomposição do domínio, algumas das células necessárias não estão mais disponíveis no processador local. Uma maneira comum de resolver esse problema é por meio do uso de células fantasmas. No exemplo atual, uma coluna de células fantasmas é adicionada ao lado direito do domínio esquerdo e uma coluna também é adicionada ao lado esquerdo do domínio direito (mostrado na Figura 2). Após cada etapa de tempo, as células fantasmas são preenchidas, passando os dados apropriados do outro processador. Você pode querer consultar a figura na
+[descrição "Jogo da Vida"] (game_of_life.md) para ver como preencher as outras células fantasmas. 
+
 
 Figure 1. Left-right domain decomposition.
 

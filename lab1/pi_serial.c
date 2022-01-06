@@ -1,11 +1,15 @@
 #include <stdio.h>
 #include <stdlib.h>
+#define sqr(x) ((x)*(x))
 
+long random(void);
 void srandom (unsigned seed);
 double dboard (int darts);
-#define DARTS 50000     /* number of throws at dartboard */
-#define ROUNDS 10       /* number of times "darts" is iterated */
-#define MASTER 0        /* task ID of master task */
+
+
+#define NPOINTS 50000     /* numero de pontos que serão sorteados */
+#define ROUNDS 10         /* number of times "darts" is iterated */
+#define MASTER 0          /* task ID of master task */
 
 int main (int argc, char *argv[])
 {
@@ -38,16 +42,13 @@ int main (int argc, char *argv[])
 * FILE: dboard.c
 * DESCRIPTION:
 *   Used in pi calculation example codes. 
-*   See mpi_pi_send.c and mpi_pi_reduce.c  
 *   Throw darts at board.  Done by generating random numbers 
 *   between 0 and 1 and converting them to values for x and y 
 *   coordinates and then testing to see if they "land" in 
 *   the circle."  If so, score is incremented.  After throwing the 
 *   specified number of darts, pi is calculated.  The computed value 
-*   of pi is returned as the value of this function, dboard. 
-*   Note:  the seed value for rand() is set in pi_send.f or pi_reduce.f. 
+*   of pi is returned as the value of this function, dboard.
 * AUTHOR: unknown
-* LAST REVISED: 04/14/05 Blaise Barney
 ****************************************************************************/
 /*
 Explanation of constants and variables used in this function:
@@ -61,12 +62,6 @@ Explanation of constants and variables used in this function:
   y_sqr       = square of y coordinate
   pi          = computed value of pi
 */
-
-
-#include <stdio.h>
-#include <stdlib.h>
-#define sqr(x) ((x)*(x))
-long random(void);
 
 double dboard(int darts)
 {

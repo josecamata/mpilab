@@ -58,7 +58,7 @@ Para iniciar este exercício, adicione as rotinas de inicialização e finaliza�
 Para mostrar que o código está funcionando conforme o esperado, adicione instruções para imprimir o  números de processos e o rank do processo local. 
 Não se esqueça de adicionar o arquivo de cabeçalho MPI.
 
-**Decomposição de Domínio*
+**Decomposição de Domínio**
 
 Para realmente executar o programa "Jogo da Vida" em paralelo, devemos configurar a decomposição de nosso domínio, ou seja, dividir o domínio em pedaços e enviar um pedaço para cada processador. No exercício atual, nos limitaremos a dois processadores. Se você estiver escrevendo seu código em C, divida o domínio com uma linha horizontal, de forma que a metade superior seja processada em um processador e a metade inferior em um processador diferente.
 
@@ -78,5 +78,6 @@ Figura 2. Células Fantasmas.
 
 
 **Desafio**
+
 Implemente a decomposição do domínio descrita acima e adicione a passagem de mensagens às células fantasmas.
 

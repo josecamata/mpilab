@@ -69,13 +69,15 @@ Uma questão que você precisa considerar é a dos limites do domínio interno. 
 [descrição "Jogo da Vida"](game_of_life.md) para ver como preencher as outras células fantasmas. 
 
 
-Figura 1. Decomposição de Domínio.
 
-<img src="lr_decomp_rot.jpg" alt="Figura 1" >
+
+<img src="lr_decomp_rot.jpg" alt="Figura 1"  with=400px>
+
+Figura 1. Decomposição de Domínio.
 
 Figura 2. Células Fantasmas.
 
-<img src="ghost_rot.jpg" alt="Figura 2">
+<img src="ghost_rot.jpg" alt="Figura 2" \>
 
 
 **Desafio**

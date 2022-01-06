@@ -24,12 +24,12 @@ int main (int argc, char *argv[])
 
   avepi = 0;
   for (i = 0; i < ROUNDS; i++) {
-    pi = dboard(DARTS);
+    pi = dboard(NPOINTS);
 
     /* Master calculates the average value of pi over all iterations */
     avepi = ((avepi * i) + pi)/(i + 1); 
     printf("   After %8d throws, average value of pi = %10.8f\n",
-           (DARTS * (i + 1)),avepi);
+           (NPOINTS * (i + 1)),avepi);
 
   } 
 

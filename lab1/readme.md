@@ -31,7 +31,7 @@ Escreva um programa que, dado n processos, deve:
 Implemennte uma versão comunicação bloqueante e outra versão com não bloqueante.
 
 
-# Exercicio 3: Encontre \pi using P2P (Mestre/Escravo)
+# Exercicio 3: Encontre &pi; using P2P (Mestre/Escravo)
 
 O programa fornecido calcula o valor de \pi usando uma aproximação de uma integral. 
 Pegue a versão serial do programa e modifique-a para funcionar em paralelo.

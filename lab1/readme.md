@@ -19,18 +19,24 @@ Familiarize-se com a estrutura do programa MPI e a comunicação ponto a ponto e
 
 Compile  e execute o programa "Hello, World". Certifique-se de compreender como cada processo imprime seu rank, bem como o número total de processos no comunicador MPI_COMM_WORLD.
 
-# Exercício 2: Envie dados para todos os processos
+# Exercício 2: Comunicação em Anel
 
-Escreva um programa que pegue dados do processo zero e os envie para todos os outros processos. Ou seja, o processo i deve receber os dados e enviá-los para o processo i + 1, até que o último processo seja alcançado.
+Escreva um programa que, dado n processos, deve:
+1. Inicializar uma variavel s com seu rank,
+2. Realizar n-1 trocas de mensagens P2P obedecendo o seguinte processo:
+   - Enviar o valor de s para rank + 1;
+   - Receber em r o valor do rank - 1;
+   - Soma em s o valor de r;
 
-Suponha que os dados consistam em um único inteiro. Para simplificar, defina o valor para o primeiro processo diretamente no código. Você pode querer usar MPI_Send e MPI_Recv em sua solução.
+Implemennte uma versão comunicação bloqueante e outra versão com não bloqueante.
 
 
-# Exercicio 3: Encontre &pi using P2P (Mestre/Escravo)
+# Exercicio 3: Encontre \pi using P2P (Mestre/Escravo)
 
-O programa fornecido calcula o &pi; usando uma aproximação de integral. Pegue a versão serial do programa e modifique-a para funcionar em paralelo.
+O programa fornecido calcula o valor de \pi usando uma aproximação de uma integral. 
+Pegue a versão serial do programa e modifique-a para funcionar em paralelo.
 
-Primeiro, familiarize-se com a maneira como o programa serial funciona. Como ele calcula o &pi;?
+Primeiro, familiarize-se com a maneira como o programa serial funciona. Como ele calcula o \pi?
 
 Dica: veja os comentários do programa. Como a precisão do cálculo depende de DARTS e ROUNDS, o número de etapas de aproximação?
 

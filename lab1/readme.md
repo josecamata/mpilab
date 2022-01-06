@@ -12,7 +12,7 @@ Familiarize-se com a estrutura do programa MPI e a comunicação ponto a ponto e
 - Hello, World: Serial C ([hello.c](hello.c))
 - Envie dados para todos os processos 
 - Calculo do &pi: Serial C  ([pi_serial.c](pi_serial.c))
-- Game of Life: Serial C  ([game_of_life-serial.c](game_of_life-serial.c) 
+- Game of Life: Serial C  ([game_of_life-serial.c](game_of_life-serial.c)) 
 .
 ## Exercício 1: Rode "Hello, World"
 

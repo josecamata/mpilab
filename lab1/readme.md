@@ -69,31 +69,15 @@ Uma questão que você precisa considerar é a dos limites do domínio interno. 
 [descrição "Jogo da Vida"](game_of_life.md) para ver como preencher as outras células fantasmas. 
 
 
-Figure 1. Left-right domain decomposition.
+Figura 1. Decomposição de Domínio.
 
-<img src="lr_decomp.jpg" alt="Figure 1" width="400px"/>
+<img src="lr_decomp_rot.jpg" alt="Figura 1" >
 
-Figure 2. Ghost cells.
+Figura 2. Células Fantasmas.
 
-<img src="ghost.jpg" alt="Figure 2" width="400px"/>
-
-
-**Your Challenge**
-
-Implement the domain decomposition described above, and add message passing to the ghost cells. Don't forget to divide the domain using a horizontal line for C and a vertical line for Fortran. In a subsequent lesson we will examine domain decomposition in the opposite direction.
+<img src="ghost_rot.jpg" alt="Figura 2">
 
 
-# Solutions
+**Desafio**
+Implemente a decomposição do domínio descrita acima e adicione a passagem de mensagens às células fantasmas.
 
-The solutions will be made available at the end of the lab.
-
-# Acknowledgment
-
-The examples in this lab are provided for educational purposes by 
-[National Center for Supercomputing Applications](http://www.ncsa.illinois.edu/), 
-(in particular their [Cyberinfrastructure Tutor](http://www.citutor.org/)), 
-[Lawrence Livermore National Laboratory](https://computing.llnl.gov/) and 
-[Argonne National Laboratory](http://www.mcs.anl.gov/). Much of the LLNL MPI materials comes from the 
-[Cornell Theory Center](http://www.cac.cornell.edu/). 
-We would like to thank them for allowing us to develop the material for machines at PDC. 
-You might find other useful educational materials at these sites.

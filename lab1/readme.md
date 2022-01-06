@@ -49,7 +49,7 @@ O que você acha que acontecerá com a precisão com a qual calculamos o &pi; qu
 Agora paralelize o programa serial. Use apenas as seis chamadas MPI básicas.
 
 
-# Exercise 4:  "Jogo da Vida"
+## Exercicio 4:  "Jogo da Vida"
 
 
 Veja [aqui um introdução rápida sobre o que é "Jogo da Vida"](game_of_life.md).

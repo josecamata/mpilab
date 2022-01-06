@@ -9,7 +9,7 @@ Familiarize-se com a estrutura do programa MPI e a comunicação ponto a ponto e
 
 # Códigos-Fontes
 
-- Hello, World: Serial C ([hello_mpi.c](hello_mpi.c))
+- Hello, World: Serial C ([hello.c](hello.c))
 - Envie dados para todos os processos 
 - Calculo do &pi: Serial C  ([pi_serial.c](pi_serial.c))
 - Produto Interno: Serial C

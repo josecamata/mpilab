@@ -1,7 +1,7 @@
 
 # Visão Geral
 
-Nesta atividade, você vai ganhar familiaridade com a estrutura do programa MPI e com a comunicação ponto a ponto trabalhando com programas como "Hello, World", cálculo de \pi, o jogo da vida e pesquisa paralela.
+Nesta atividade, você vai ganhar familiaridade com a estrutura do programa MPI e com a comunicação ponto a ponto trabalhando com programas como "Hello, World", cálculo de \pi, o jogo da vida.
 
 ### Objetivos
 
@@ -19,7 +19,6 @@ Familiarize-se com a estrutura do programa MPI e a comunicação ponto a ponto e
 
 Compile  e execute o programa "Hello, World". Certifique-se de compreender como cada processo imprime seu rank, bem como o número total de processos no comunicador MPI_COMM_WORLD.
 
-
 # Exercício 2: Envie dados para todos os processos
 
 Escreva um programa que pegue dados do processo zero e os envie para todos os outros processos. Ou seja, o processo i deve receber os dados e enviá-los para o processo i + 1, até que o último processo seja alcançado.
@@ -27,7 +26,7 @@ Escreva um programa que pegue dados do processo zero e os envie para todos os ou
 Suponha que os dados consistam em um único inteiro. Para simplificar, defina o valor para o primeiro processo diretamente no código. Você pode querer usar MPI_Send e MPI_Recv em sua solução.
 
 
-# Exercise 3: Encontre &pi using P2P (Mestre/Escravo)
+# Exercicio 3: Encontre &pi using P2P (Mestre/Escravo)
 
 O programa fornecido calcula o &pi; usando uma aproximação de integral. Pegue a versão serial do programa e modifique-a para funcionar em paralelo.
 
@@ -44,14 +43,17 @@ Agora paralelize o programa serial. Use apenas as seis chamadas MPI básicas.
 Dica: Como o número de DARTS e ROUNDS é codificado, todos os escravos já sabem disso, mas cada trabalhador deve calcular quantos estão em sua parte nos DARDOS para que ele faça sua parte no trabalho. Ao terminar, cada processo escavo envia sua soma parcial de volta ao processo mestre, que a recebe e calcula a soma final. 
 
 
-# Exercise 5: Use P2P in "Game of Life"
+# Exercise 5: Use P2P no "Jogo da Vida"
 
+Neste exercicio 
 In this exercise, you continue learning about point-to-point message-passing routines in MPI.
 After completing this exercise, you should be able to write the real parallel MPI code to solve the Game of Life.
 
 [Here is some background on the "Game of Life"](Game_of_life.md), in case you're new to the problem.
 
 To start this exercise, add the initialization and finalization routines to the serial "Game of Life" code. This will effectly duplicate the exact same calculation on each processor. In order to show that the code is performing as expected, add statements to print overall size, and the rank of the local process. Don't forget to add the MPI header file.
+
+Para iniciar este exercício, adicione as rotinas de inicialização e finalização ao código serial "Game of Life". Isso duplicará com eficácia o mesmo cálculo exato em cada processador. Para mostrar que o código está funcionando conforme o esperado, adicione instruções para imprimir o tamanho geral e a classificação do processo local. Não se esqueça de adicionar o arquivo de cabeçalho MPI.
 
 
 **Domain Decomposition**

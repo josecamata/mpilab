@@ -66,7 +66,7 @@ Para realmente executar o programa "Jogo da Vida" em paralelo, devemos configura
 Dica: Escolhemos a configuração descrita acima porque em matrizes C, as linhas são contíguas. Esta abordagem permite a especificação da localização inicial do array e o número de dados nas rotinas de envio e recebimento.
 
 Uma questão que você precisa considerar é a dos limites do domínio interno. A Figura 1 mostra a decomposição do domínio "esquerda-direita" descrita acima. Cada célula precisa de informações de todas as células adjacentes para determinar seu novo estado. Com a decomposição do domínio, algumas das células necessárias não estão mais disponíveis no processador local. Uma maneira comum de resolver esse problema é por meio do uso de células fantasmas. No exemplo atual, uma coluna de células fantasmas é adicionada ao lado direito do domínio esquerdo e uma coluna também é adicionada ao lado esquerdo do domínio direito (mostrado na Figura 2). Após cada etapa de tempo, as células fantasmas são preenchidas, passando os dados apropriados do outro processador. Você pode querer consultar a figura na
-[descrição "Jogo da Vida"] (game_of_life.md) para ver como preencher as outras células fantasmas. 
+[descrição "Jogo da Vida"](game_of_life.md) para ver como preencher as outras células fantasmas. 
 
 
 Figure 1. Left-right domain decomposition.

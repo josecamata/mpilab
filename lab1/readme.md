@@ -1,7 +1,7 @@
 
 # Visão Geral
 
-Nesta atividade, você vai ganhar familiaridade com a estrutura do programa MPI e com a comunicação ponto a ponto trabalhando com programas como "Hello, World", cálculo de %pi;, produto interno entre dois vetores e o Jogo da Vida.
+Nesta atividade, você vai ganhar familiaridade com a estrutura do programa MPI e com a comunicação ponto a ponto trabalhando com programas como "Hello, World", cálculo de %pis e o Jogo da Vida.
 
 ### Objetivos
 
@@ -12,7 +12,6 @@ Familiarize-se com a estrutura do programa MPI e a comunicação ponto a ponto e
 - Hello, World: Serial C ([hello.c](hello.c))
 - Envie dados para todos os processos 
 - Calculo do &pi: Serial C  ([pi_serial.c](pi_serial.c))
-- Produto Interno: Serial C
 - Game of Life: Serial C  ([game_of_life-serial.c](game_of_life-serial.c) 
 .
 ## Exercício 1: Rode "Hello, World"

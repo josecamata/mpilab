@@ -77,7 +77,7 @@ Figura 1. Decomposição de Domínio.
 
 Figura 2. Células Fantasmas.
 
-<img src="ghost_rot.jpg" alt="Figura 2" \>
+<img src="ghost_rot.jpg" alt="Figura 2" with=400px>
 
 
 **Desafio**

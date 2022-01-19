@@ -40,7 +40,7 @@ Método de Monte Carlo é um termo utilizado para se referir a qualquer método 
 
 Para calcular a área da circunferência unitária, utilizaremos o método de integração de Monte Carlo. A ideia é colocar a circunferência dentro de uma figura, cuja área seja fácil de calcular, e sortear pontos aleatórios dentro da figura. Utilizaremos um quadrado. Se o ponto sorteado estiver dentro da circunferência, então marcamos um acerto. Ao final dos sorteios, espera-se que a área da circunferência seja proporcional à taxa de acertos e à área do quadrado. Esse valor será uma aproximação para &pi;.
 
-Pegue a [versão serial](serial_pi.c) do programa e modifique-a para funcionar em paralelo.
+Pegue a [versão serial](pi_serial.c) do programa e modifique-a para funcionar em paralelo.
 
 Primeiro, familiarize-se com a maneira como o programa serial funciona. 
 
